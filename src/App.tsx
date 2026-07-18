@@ -20,7 +20,7 @@ export default function App() {
       <main>
         <Hero />
         <Reveal>
-          <section className={styles.bandWide}>
+          <section className={`${styles.bandWide} ${styles.bandTint}`}>
             <DualTracks />
           </section>
         </Reveal>
@@ -30,7 +30,7 @@ export default function App() {
           </section>
         </Reveal>
         <Reveal>
-          <section className={styles.bandWide}>
+          <section className={`${styles.bandWide} ${styles.bandWork}`}>
             <FeaturedWork />
           </section>
         </Reveal>

@@ -1,23 +1,33 @@
 /**
- * Warm studio — soft neutrals, photography frames, almost no neon
- * Stone / linen / ink — accent is deep espresso, not lime
+ * Warm studio + Atlantic accent
+ * Galway coast teal + copper warmth for fintech/dev balance
  */
 
 :root {
-  --ws-linen: #e8e4dc;
-  --ws-linen-deep: #ddd7cc;
-  --ws-paper: #f7f5f1;
-  --ws-white: #fffcf8;
-  --ws-ink: #1a1816;
-  --ws-ink-soft: #2e2a26;
-  --ws-muted: #6e675e;
-  --ws-faint: #9a9288;
-  --ws-line: rgba(26, 24, 22, 0.12);
-  --ws-line-strong: rgba(26, 24, 22, 0.22);
-  --ws-espresso: #3d342c;
-  --ws-espresso-soft: rgba(61, 52, 44, 0.08);
-  --ws-mat: #f0ebe3;
+  --ws-linen: #e6ebe8;
+  --ws-linen-deep: #d5ddd8;
+  --ws-paper: #f4f7f5;
+  --ws-white: #fcfdfc;
+  --ws-ink: #152028;
+  --ws-ink-soft: #2a3540;
+  --ws-muted: #5c676f;
+  --ws-faint: #879199;
+  --ws-line: rgba(21, 32, 40, 0.12);
+  --ws-line-strong: rgba(21, 32, 40, 0.22);
+  --ws-mat: #ebf0ed;
   --ws-frame: #ffffff;
+
+  /* Primary: Atlantic teal. Secondary: warm copper. */
+  --ws-teal: #0f5c66;
+  --ws-teal-deep: #0a454c;
+  --ws-teal-soft: rgba(15, 92, 102, 0.1);
+  --ws-teal-mid: rgba(15, 92, 102, 0.18);
+  --ws-copper: #b86a3d;
+  --ws-copper-soft: rgba(184, 106, 61, 0.12);
+  --ws-sea: #3d7a72;
+
+  --ws-espresso: var(--ws-teal-deep);
+  --ws-espresso-soft: var(--ws-teal-soft);
 
   --color-bg: var(--ws-linen);
   --color-bg-elevated: var(--ws-paper);
@@ -26,17 +36,17 @@
   --color-text-muted: var(--ws-faint);
   --color-text-strong: var(--ws-ink);
   --color-heading: var(--ws-ink);
-  --color-accent: var(--ws-espresso);
-  --color-accent-hover: var(--ws-ink);
+  --color-accent: var(--ws-teal);
+  --color-accent-hover: var(--ws-teal-deep);
   --color-border: var(--ws-line);
   --color-border-strong: var(--ws-line-strong);
 
   --pf-ink: var(--ws-ink);
-  --pf-accent: var(--ws-espresso);
-  --pf-accent-bright: var(--ws-ink);
-  --pf-accent-muted: var(--ws-espresso-soft);
-  --pf-accent-border: var(--ws-line-strong);
-  --pf-copper: var(--ws-muted);
+  --pf-accent: var(--ws-teal);
+  --pf-accent-bright: var(--ws-teal-deep);
+  --pf-accent-muted: var(--ws-teal-soft);
+  --pf-accent-border: var(--ws-teal-mid);
+  --pf-copper: var(--ws-copper);
   --pf-steel-warm: var(--ws-faint);
   --pf-fog: var(--ws-muted);
   --pf-mist: var(--ws-ink-soft);
@@ -99,11 +109,11 @@
   --duration-slow: 480ms;
 
   --frame-pad: clamp(0.75rem, 2vw, 1.35rem);
-  --frame-shadow: 0 18px 50px rgba(26, 24, 22, 0.08), 0 2px 8px rgba(26, 24, 22, 0.04);
+  --frame-shadow: 0 18px 50px rgba(21, 32, 40, 0.08), 0 2px 8px rgba(21, 32, 40, 0.04);
 
-  --accent: var(--ws-espresso);
-  --accent-border: var(--ws-line-strong);
-  --accent-bg: var(--ws-espresso-soft);
+  --accent: var(--ws-teal);
+  --accent-border: var(--ws-teal-mid);
+  --accent-bg: var(--ws-teal-soft);
   --bg: var(--ws-linen);
   --text: var(--ws-muted);
   --text-h: var(--ws-ink);

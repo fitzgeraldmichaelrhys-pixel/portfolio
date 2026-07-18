@@ -8,7 +8,11 @@ export function Footer() {
         <p className={styles.line}>
           {SITE.name} · Junior developer / Account manager · {SITE.location}
         </p>
-        <p className={styles.meta}>{SITE.year}</p>
+        <p className={styles.meta}>
+          <a href={SITE.phoneHref}>{SITE.phone}</a>
+          <span aria-hidden="true">·</span>
+          <span>{SITE.year}</span>
+        </p>
       </div>
     </footer>
   )

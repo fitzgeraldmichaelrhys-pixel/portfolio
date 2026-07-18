@@ -2,8 +2,8 @@ import { CV_DOWNLOAD } from '../content/cv'
 import styles from './CvDocument.module.css'
 
 const CV_PAGES = [
-  { src: '/work/cv-page-1.png', alt: 'Michael Fitzgerald CV — page 1' },
-  { src: '/work/cv-page-2.png', alt: 'Michael Fitzgerald CV — page 2' },
+  { src: '/work/cv-page-1.png', alt: 'Michael Fitzgerald CV, page 1' },
+  { src: '/work/cv-page-2.png', alt: 'Michael Fitzgerald CV, page 2' },
 ] as const
 
 export function CvDocument() {

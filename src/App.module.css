@@ -30,6 +30,19 @@
   border-top: 1px solid var(--ws-line);
 }
 
+.bandTint {
+  background: color-mix(in srgb, var(--ws-teal-soft) 55%, var(--ws-paper));
+}
+
+.bandWork {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--ws-teal-soft) 40%, var(--ws-linen)) 0%,
+      var(--ws-linen) 100%
+    );
+}
+
 .band > * {
   max-width: 42rem;
   margin-left: auto;

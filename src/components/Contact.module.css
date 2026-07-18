@@ -3,6 +3,15 @@
   max-width: 40rem;
 }
 
+.eyebrow {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--ws-teal);
+}
+
 .title {
   margin: 0 0 0.75rem;
   font-family: var(--font-display);
@@ -29,13 +38,32 @@
   font-family: var(--font-display);
   font-size: var(--text-md);
   font-weight: 600;
-  color: var(--ws-ink);
+  color: var(--ws-teal);
   text-decoration: none;
-  border-bottom: 1px solid var(--ws-ink);
+  border-bottom: 1px solid var(--ws-teal-mid);
 }
 
 .primaryCta:hover {
-  opacity: 0.75;
+  border-bottom-color: var(--ws-teal);
+}
+
+.phone {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--ws-ink);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.phone:hover {
+  color: var(--ws-teal);
+}
+
+.location {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--ws-faint);
 }
 
 .link {
@@ -45,5 +73,5 @@
 }
 
 .link:hover {
-  color: var(--ws-ink);
+  color: var(--ws-teal);
 }

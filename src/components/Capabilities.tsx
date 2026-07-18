@@ -7,16 +7,16 @@ export function Capabilities() {
       <header className={styles.header}>
         <p className={styles.eyebrow}>Toolkit</p>
         <h2 id="skills-heading" className={styles.title}>
-          Skills that show up on the job
+          What I bring to a team
         </h2>
         <p className={styles.lede}>
-          Commercial strengths from fintech BD and AE work, alongside the languages and
-          tools I use as a junior developer.
+          Commercial habits from Revolut and PayPal on one side. Languages and product
+          tooling I use to ship on the other.
         </p>
       </header>
 
       <div className={styles.grid}>
-        <article className={styles.group}>
+        <article className={`${styles.group} ${styles.groupCommercial}`}>
           <h3 className={styles.groupTitle}>Fintech & account work</h3>
           <ul className={styles.chips}>
             {SKILLS.commercial.map((item) => (
@@ -24,7 +24,7 @@ export function Capabilities() {
             ))}
           </ul>
         </article>
-        <article className={styles.group}>
+        <article className={`${styles.group} ${styles.groupDev}`}>
           <h3 className={styles.groupTitle}>Development</h3>
           <ul className={styles.chips}>
             {SKILLS.technical.map((item) => (

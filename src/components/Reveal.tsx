@@ -8,7 +8,7 @@ interface RevealProps {
   delay?: number
 }
 
-/** Agent 4 — scroll reveal with reduced-motion path */
+/** Scroll reveal with reduced-motion path */
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
   const reduced = useReducedMotion()
 

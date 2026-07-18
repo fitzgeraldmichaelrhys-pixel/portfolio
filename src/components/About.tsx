@@ -9,18 +9,21 @@ export function About() {
         About
       </h2>
       <p className={styles.bio}>
-        I&apos;m based in {SITE.location}. My career so far is rooted in{' '}
-        <strong>fintech and B2B commercial work</strong> — Revolut as a Junior Account
-        Executive and PayPal as a BDR — plus earlier lead-generation leadership at IDG
-        Direct.
+        I&apos;m based in {SITE.location}. Most of my working life so far has been{' '}
+        <strong>fintech and B2B commercial work</strong>: Revolut as a Junior Account
+        Executive, PayPal as a BDR, and earlier lead-generation leadership at IDG Direct.
       </p>
       <p className={styles.bio}>
-        In parallel I&apos;m building a <strong>developer skill set</strong> (C, Python,
-        TypeScript, web) and studying Computer Science. I&apos;m looking for roles where
-        either track matters — junior engineering, account management, or fintech teams
-        that value both.
+        Alongside that I&apos;m building a <strong>developer skill set</strong> in C,
+        Python, TypeScript, and web stacks, and studying Computer Science. AuditPack is
+        the clearest proof: a live product with auth, payments, and real exports, not a
+        tutorial clone. I want roles where either track matters, or where a fintech team
+        wants both.
       </p>
-      <p className={styles.meta}>{SITE.education}</p>
+      <div className={styles.metaBlock}>
+        <p className={styles.meta}>{SITE.education}</p>
+        <p className={styles.meta}>{SITE.school}</p>
+      </div>
     </section>
   )
 }

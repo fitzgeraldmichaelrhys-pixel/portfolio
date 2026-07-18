@@ -25,7 +25,7 @@ export function SelectedWork() {
             <span className={styles.tag}>TypeScript · React · Node</span>
             <h3 className={styles.cardTitle}>AuditPack</h3>
             <p className={styles.description}>
-              A live Compliance OS that turns evidence into ISO-ready documentation —
+              A live Compliance OS that turns evidence into ISO-ready documentation.
               built end-to-end as a personal product project.
             </p>
             <span className={styles.cta}>Read the case study →</span>

@@ -24,8 +24,19 @@
 .meta {
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 0.5rem;
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   color: var(--ws-faint);
+}
+
+.meta a {
+  color: var(--ws-teal);
+  text-decoration: none;
+}
+
+.meta a:hover {
+  text-decoration: underline;
 }

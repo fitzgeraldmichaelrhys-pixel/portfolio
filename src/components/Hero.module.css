@@ -1,11 +1,23 @@
 .hero {
+  position: relative;
   width: 100%;
-  background:
-    linear-gradient(180deg, var(--ws-paper) 0%, var(--ws-linen) 100%);
+  overflow: hidden;
+  background: var(--ws-paper);
   border-bottom: 1px solid var(--ws-line);
 }
 
+.wash {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 60% at 12% -10%, var(--ws-teal-soft), transparent 55%),
+    radial-gradient(ellipse 55% 45% at 92% 8%, var(--ws-copper-soft), transparent 50%),
+    linear-gradient(180deg, var(--ws-paper) 0%, var(--ws-linen) 100%);
+}
+
 .inner {
+  position: relative;
   max-width: 52rem;
   margin: 0 auto;
   padding: clamp(3.5rem, 9vw, 6rem) var(--gutter) clamp(3rem, 7vw, 4.5rem);
@@ -17,7 +29,7 @@
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--ws-faint);
+  color: var(--ws-teal);
 }
 
 .name {
@@ -40,7 +52,7 @@
 
 .oneLiner {
   margin: 0.85rem 0 0;
-  max-width: 42ch;
+  max-width: 46ch;
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
   color: var(--ws-muted);
@@ -60,15 +72,42 @@
   font-family: var(--font-display);
   font-size: var(--text-sm);
   font-weight: 600;
-  color: var(--ws-ink);
-  background: var(--ws-frame);
-  border: 1px solid var(--ws-line-strong);
   border-radius: var(--radius-sm);
+}
+
+.trackCommercial {
+  color: var(--ws-copper);
+  background: var(--ws-copper-soft);
+  border: 1px solid rgba(184, 106, 61, 0.35);
+}
+
+.trackDev {
+  color: var(--ws-teal-deep);
+  background: var(--ws-teal-soft);
+  border: 1px solid var(--ws-teal-mid);
 }
 
 .trackDivider {
   color: var(--ws-faint);
   font-size: var(--text-sm);
+}
+
+.craft {
+  margin: 1rem 0 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.02em;
+  color: var(--ws-ink-soft);
+}
+
+.craft a {
+  color: var(--ws-teal);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ws-teal-mid);
+}
+
+.craft a:hover {
+  border-bottom-color: var(--ws-teal);
 }
 
 .ctaGroup {
@@ -89,16 +128,20 @@
   font-weight: 500;
   text-decoration: none;
   border-radius: var(--radius-sm);
+  transition: background var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out),
+    transform var(--duration-normal) var(--ease-out);
 }
 
 .ctaPrimary {
-  background: var(--ws-ink);
-  color: var(--ws-paper);
-  border: 1px solid var(--ws-ink);
+  background: var(--ws-teal);
+  color: var(--ws-white);
+  border: 1px solid var(--ws-teal);
 }
 
 .ctaPrimary:hover {
-  background: var(--ws-ink-soft);
+  background: var(--ws-teal-deep);
+  border-color: var(--ws-teal-deep);
 }
 
 .ctaSecondary {
@@ -108,7 +151,8 @@
 }
 
 .ctaSecondary:hover {
-  border-color: var(--ws-ink);
+  border-color: var(--ws-teal);
+  color: var(--ws-teal-deep);
 }
 
 .highlights {
@@ -131,7 +175,7 @@
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
   font-weight: 600;
-  color: var(--ws-ink);
+  color: var(--ws-teal);
   line-height: 1;
 }
 
@@ -144,5 +188,12 @@
 @media (max-width: 720px) {
   .highlights {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ctaPrimary:hover,
+  .ctaSecondary:hover {
+    transform: translateY(-1px);
   }
 }

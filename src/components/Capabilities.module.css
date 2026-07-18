@@ -14,7 +14,7 @@
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--ws-faint);
+  color: var(--ws-teal);
 }
 
 .title {
@@ -43,6 +43,15 @@
   background: var(--ws-frame);
   border: 1px solid var(--ws-line);
   border-radius: var(--radius-md);
+  border-left: 3px solid transparent;
+}
+
+.groupCommercial {
+  border-left-color: var(--ws-copper);
+}
+
+.groupDev {
+  border-left-color: var(--ws-teal);
 }
 
 .groupTitle {
@@ -65,10 +74,23 @@
 .chips li {
   padding: 0.45rem 0.75rem;
   font-size: var(--text-sm);
-  color: var(--ws-ink-soft);
-  background: var(--ws-mat);
-  border: 1px solid var(--ws-line);
   border-radius: var(--radius-sm);
+  border: 1px solid var(--ws-line);
+}
+
+.groupCommercial .chips li {
+  color: #7a4526;
+  background: var(--ws-copper-soft);
+  border-color: rgba(184, 106, 61, 0.28);
+}
+
+.groupDev .chips li {
+  color: var(--ws-teal-deep);
+  background: var(--ws-teal-soft);
+  border-color: var(--ws-teal-mid);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 800px) {

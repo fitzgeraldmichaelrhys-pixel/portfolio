@@ -5,7 +5,7 @@
 
 .header {
   margin-bottom: 2rem;
-  max-width: 36rem;
+  max-width: 38rem;
 }
 
 .eyebrow {
@@ -14,7 +14,7 @@
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--ws-faint);
+  color: var(--ws-teal);
 }
 
 .title {
@@ -42,6 +42,17 @@
   border-radius: var(--radius-md);
   box-shadow: var(--frame-shadow);
   min-height: 100%;
+  border-top: 3px solid transparent;
+  transition: transform var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.cardCommercial {
+  border-top-color: var(--ws-copper);
+}
+
+.cardDev {
+  border-top-color: var(--ws-teal);
 }
 
 .cardKicker {
@@ -50,7 +61,14 @@
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--ws-faint);
+}
+
+.cardCommercial .cardKicker {
+  color: var(--ws-copper);
+}
+
+.cardDev .cardKicker {
+  color: var(--ws-teal);
 }
 
 .cardTitle {
@@ -94,7 +112,14 @@
   width: 0.35rem;
   height: 0.35rem;
   border-radius: 50%;
-  background: var(--ws-ink);
+}
+
+.cardCommercial .list li::before {
+  background: var(--ws-copper);
+}
+
+.cardDev .list li::before {
+  background: var(--ws-teal);
 }
 
 .logos {
@@ -117,8 +142,25 @@
   border-radius: var(--radius-sm);
 }
 
+.cardDev .logos span {
+  color: var(--ws-teal-deep);
+  background: var(--ws-teal-soft);
+}
+
+.cardCommercial .logos span {
+  color: #8a4f2c;
+  background: var(--ws-copper-soft);
+}
+
 @media (max-width: 800px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 55px rgba(21, 32, 40, 0.1), 0 2px 8px rgba(21, 32, 40, 0.04);
   }
 }

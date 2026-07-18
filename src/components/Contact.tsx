@@ -5,6 +5,7 @@ import styles from './Contact.module.css'
 export function Contact() {
   return (
     <section className={styles.contact} aria-labelledby="contact-heading">
+      <p className={styles.eyebrow}>Get in touch</p>
       <h2 id="contact-heading" className={styles.title}>
         Contact
       </h2>
@@ -14,9 +15,10 @@ export function Contact() {
         <a className={styles.primaryCta} href={`mailto:${SITE.email}`}>
           {SITE.email}
         </a>
-        <a className={styles.link} href={SITE.phoneHref}>
+        <a className={styles.phone} href={SITE.phoneHref}>
           {SITE.phone}
         </a>
+        <p className={styles.location}>{SITE.location}</p>
         <a
           className={styles.link}
           href={SITE.linkedin}

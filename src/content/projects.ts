@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'auditpack',
     title: 'AuditPack',
-    role: 'Personal project — Compliance OS for ISO documentation',
+    role: 'Personal project. Compliance OS for ISO documentation',
     stack: ['TypeScript', 'React', 'Node.js', 'Express', 'Supabase', 'Stripe'],
     problem:
       'Teams preparing for ISO audits struggle with scattered policies and weak evidence. I wanted to build a real product that turns uploads into structured, exportable documentation.',

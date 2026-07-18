@@ -62,7 +62,7 @@
 }
 
 .link:hover {
-  color: var(--ws-ink);
+  color: var(--ws-teal);
 }
 
 @media (max-width: 720px) {

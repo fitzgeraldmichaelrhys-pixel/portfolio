@@ -9,7 +9,7 @@
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--ws-faint);
+  color: var(--ws-teal);
 }
 
 .title {
@@ -32,10 +32,17 @@
   font-weight: 600;
 }
 
-.meta {
-  margin: 1.5rem 0 0;
+.metaBlock {
+  margin-top: 1.5rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--ws-line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.meta {
+  margin: 0;
   font-size: var(--text-sm);
   color: var(--ws-faint);
 }

@@ -7,13 +7,13 @@ export function DualTracks() {
       <header className={styles.header}>
         <p className={styles.eyebrow}>Two strengths</p>
         <h2 id="tracks-heading" className={styles.title}>
-          Built for fintech teams — commercial and technical
+          Commercial fintech experience, and a real product on the internet
         </h2>
       </header>
 
       <div className={styles.grid}>
-        <article className={styles.card}>
-          <p className={styles.cardKicker}>Track 01</p>
+        <article className={`${styles.card} ${styles.cardCommercial}`}>
+          <p className={styles.cardKicker}>Track 01 · Commercial</p>
           <h3 className={styles.cardTitle}>{TRACKS.fintech.title}</h3>
           <p className={styles.cardLede}>{TRACKS.fintech.lede}</p>
           <ul className={styles.list}>
@@ -28,8 +28,8 @@ export function DualTracks() {
           </div>
         </article>
 
-        <article className={styles.card}>
-          <p className={styles.cardKicker}>Track 02</p>
+        <article className={`${styles.card} ${styles.cardDev}`}>
+          <p className={styles.cardKicker}>Track 02 · Engineering</p>
           <h3 className={styles.cardTitle}>{TRACKS.developer.title}</h3>
           <p className={styles.cardLede}>{TRACKS.developer.lede}</p>
           <ul className={styles.list}>
@@ -42,6 +42,7 @@ export function DualTracks() {
             <span>Python</span>
             <span>TypeScript</span>
             <span>React</span>
+            <span>Node</span>
           </div>
         </article>
       </div>

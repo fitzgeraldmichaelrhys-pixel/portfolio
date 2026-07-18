@@ -8,6 +8,7 @@ export const SITE = {
   phoneHref: 'tel:+353899438384',
   location: 'Galway, Ireland',
   linkedin: 'https://www.linkedin.com/in/michael-fitzgerald-42abab206/',
+  github: 'https://github.com/fitzgeraldmichaelrhys-pixel',
   availability:
     'Open to junior developer, account executive, and BD roles, especially in fintech or B2B SaaS.',
   education: 'BSc Computer Science, IU University, Germany (expected 09/2028)',

@@ -1,10 +1,11 @@
 .section {
   text-align: left;
+  max-width: 52rem !important;
 }
 
 .rail {
   display: grid;
-  grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
+  grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: start;
 }
@@ -20,13 +21,13 @@
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--ws-faint);
+  color: var(--ws-teal);
 }
 
 .title {
   margin: 0 0 0.75rem;
   font-family: var(--font-display);
-  font-size: var(--text-2xl);
+  font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.15rem);
   font-weight: var(--weight-semibold);
   color: var(--ws-ink);
 }
@@ -42,15 +43,41 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  border-left: 2px solid var(--ws-teal-mid);
 }
 
 .entry {
-  padding: 1.35rem 0;
-  border-top: 1px solid var(--ws-line);
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 1rem;
+  padding: 0 0 1.5rem 1.15rem;
 }
 
 .entry:last-child {
-  border-bottom: 1px solid var(--ws-line);
+  padding-bottom: 0;
+}
+
+.marker {
+  position: absolute;
+  left: -0.4rem;
+  top: 0.35rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--ws-copper);
+  border: 2px solid var(--ws-frame);
+  box-shadow: 0 0 0 1px var(--ws-copper);
+}
+
+.entryBody {
+  min-width: 0;
+  padding: 1.15rem 1.2rem;
+  background: var(--ws-frame);
+  border: 1px solid var(--ws-line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--frame-shadow);
+  border-top: 3px solid var(--ws-copper);
 }
 
 .entryHead {
@@ -72,7 +99,8 @@
 .period {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: var(--ws-faint);
+  color: var(--ws-teal);
+  letter-spacing: 0.02em;
 }
 
 .role {
@@ -108,5 +136,6 @@
 
   .header {
     position: static;
+    margin-bottom: 1.25rem;
   }
 }

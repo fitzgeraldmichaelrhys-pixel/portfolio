@@ -3,6 +3,7 @@ import styles from './Nav.module.css'
 
 const NAV_LINKS = [
   { label: 'Strengths', href: '#tracks' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
   { label: 'Work', href: '#work' },
   { label: 'CV', href: '#cv' },

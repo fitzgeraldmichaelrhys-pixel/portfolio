@@ -1,6 +1,7 @@
 import { Nav } from './components/Nav'
 import { Hero } from './components/Hero'
 import { DualTracks } from './components/DualTracks'
+import { Experience } from './components/Experience'
 import { Capabilities } from './components/Capabilities'
 import { FeaturedWork } from './components/FeaturedWork'
 import { CvDocument } from './components/CvDocument'
@@ -22,6 +23,11 @@ export default function App() {
         <Reveal>
           <section className={`${styles.bandWide} ${styles.bandTint}`}>
             <DualTracks />
+          </section>
+        </Reveal>
+        <Reveal>
+          <section id="experience" className={styles.bandWide}>
+            <Experience />
           </section>
         </Reveal>
         <Reveal>

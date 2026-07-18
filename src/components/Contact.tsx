@@ -29,6 +29,14 @@ export function Contact() {
         </a>
         <a
           className={styles.link}
+          href={SITE.github}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          className={styles.link}
           href={CV_DOWNLOAD.href}
           download={CV_DOWNLOAD.filename}
         >

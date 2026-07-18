@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 630" fill="none">
+  <rect width="840" height="630" fill="#0e1014"/>
+  <rect x="1" y="1" width="838" height="628" stroke="rgba(107,114,128,0.6)" stroke-width="2" fill="none"/>
+  <text x="32" y="48" font-family="system-ui,sans-serif" font-size="11" fill="#c7ff42" letter-spacing="0.14em">AUDITPACK</text>
+  <text x="32" y="88" font-family="system-ui,sans-serif" font-size="26" font-weight="700" fill="#f4f5f7">Gap analysis matrix</text>
+  <!-- table header -->
+  <rect x="32" y="120" width="776" height="36" rx="4" fill="#1c2028"/>
+  <text x="48" y="143" font-family="ui-monospace,monospace" font-size="10" fill="#8b93a7">CONTROL</text>
+  <text x="320" y="143" font-family="ui-monospace,monospace" font-size="10" fill="#8b93a7">CLAUSE</text>
+  <text x="520" y="143" font-family="ui-monospace,monospace" font-size="10" fill="#8b93a7">STATUS</text>
+  <text x="680" y="143" font-family="ui-monospace,monospace" font-size="10" fill="#8b93a7">EVIDENCE</text>
+  <!-- rows -->
+  <g font-family="ui-monospace,monospace" font-size="11">
+    <rect x="32" y="164" width="776" height="44" fill="#14171c" stroke="rgba(255,255,255,0.04)"/>
+    <text x="48" y="192" fill="#f4f5f7">Document control</text>
+    <text x="320" y="192" fill="#8b93a7">7.5</text>
+    <rect x="520" y="176" width="72" height="20" rx="3" fill="rgba(199,255,66,0.15)" stroke="rgba(199,255,66,0.4)"/>
+    <text x="532" y="190" fill="#c7ff42" font-size="10">Met</text>
+    <rect x="680" y="178" width="96" height="16" rx="2" fill="#252a34"/>
+    <rect x="32" y="212" width="776" height="44" fill="#14171c" stroke="rgba(255,255,255,0.04)"/>
+    <text x="48" y="240" fill="#f4f5f7">Risk assessment</text>
+    <text x="320" y="240" fill="#8b93a7">6.1</text>
+    <rect x="520" y="224" width="88" height="20" rx="3" fill="rgba(180,140,80,0.12)" stroke="rgba(180,140,80,0.35)"/>
+    <text x="532" y="238" fill="#b4a060" font-size="10">Partial</text>
+    <rect x="680" y="226" width="96" height="16" rx="2" fill="#252a34"/>
+    <rect x="32" y="260" width="776" height="44" fill="#14171c" stroke="rgba(255,255,255,0.04)"/>
+    <text x="48" y="288" fill="#f4f5f7">Access control</text>
+    <text x="320" y="288" fill="#8b93a7">A.9</text>
+    <rect x="520" y="272" width="72" height="20" rx="3" fill="rgba(199,255,66,0.15)" stroke="rgba(199,255,66,0.4)"/>
+    <text x="532" y="286" fill="#c7ff42" font-size="10">Met</text>
+    <rect x="680" y="274" width="96" height="16" rx="2" fill="#252a34"/>
+    <rect x="32" y="308" width="776" height="44" fill="#14171c" stroke="rgba(255,255,255,0.04)"/>
+    <text x="48" y="336" fill="#f4f5f7">Incident response</text>
+    <text x="320" y="336" fill="#8b93a7">A.16</text>
+    <rect x="520" y="320" width="64" height="20" rx="3" fill="rgba(220,80,80,0.12)" stroke="rgba(220,80,80,0.35)"/>
+    <text x="532" y="334" fill="#dc5050" font-size="10">Gap</text>
+    <rect x="680" y="322" width="96" height="16" rx="2" fill="#252a34"/>
+  </g>
+  <!-- heat strip -->
+  <rect x="32" y="400" width="776" height="160" rx="8" fill="#1c2028" stroke="rgba(255,255,255,0.06)"/>
+  <text x="48" y="432" font-family="ui-monospace,monospace" font-size="10" fill="#8b93a7">COVERAGE HEATMAP</text>
+  <g transform="translate(48,452)">
+    <rect width="48" height="48" rx="4" fill="rgba(199,255,66,0.7)"/>
+    <rect x="56" width="48" height="48" rx="4" fill="rgba(199,255,66,0.45)"/>
+    <rect x="112" width="48" height="48" rx="4" fill="rgba(199,255,66,0.25)"/>
+    <rect x="168" width="48" height="48" rx="4" fill="rgba(180,140,80,0.35)"/>
+    <rect x="224" width="48" height="48" rx="4" fill="rgba(220,80,80,0.35)"/>
+    <rect x="280" width="48" height="48" rx="4" fill="rgba(199,255,66,0.55)"/>
+    <rect x="336" width="48" height="48" rx="4" fill="rgba(199,255,66,0.8)"/>
+    <rect x="392" width="48" height="48" rx="4" fill="rgba(199,255,66,0.3)"/>
+    <rect x="448" width="48" height="48" rx="4" fill="rgba(199,255,66,0.6)"/>
+    <rect x="504" width="48" height="48" rx="4" fill="rgba(180,140,80,0.4)"/>
+    <rect x="560" width="48" height="48" rx="4" fill="rgba(199,255,66,0.5)"/>
+    <rect x="616" width="48" height="48" rx="4" fill="rgba(199,255,66,0.72)"/>
+    <rect x="672" width="48" height="48" rx="4" fill="rgba(220,80,80,0.28)"/>
+  </g>
+  <text x="32" y="608" font-family="ui-monospace,monospace" font-size="12" fill="#5c6478">PLACEHOLDER · GAP ANALYSIS</text>
+</svg>

@@ -18,9 +18,20 @@
 
 .inner {
   position: relative;
-  max-width: 52rem;
+  max-width: 58rem;
   margin: 0 auto;
   padding: clamp(3.5rem, 9vw, 6rem) var(--gutter) clamp(3rem, 7vw, 4.5rem);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(12rem, 0.85fr);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  align-items: start;
+}
+
+.copy {
+  min-width: 0;
 }
 
 .kicker {
@@ -35,7 +46,7 @@
 .name {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 2rem + 3vw, 4.25rem);
+  font-size: clamp(2.4rem, 1.8rem + 2.5vw, 3.85rem);
   font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-tight);
   line-height: 1.06;
@@ -52,7 +63,7 @@
 
 .oneLiner {
   margin: 0.85rem 0 0;
-  max-width: 46ch;
+  max-width: 42ch;
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
   color: var(--ws-muted);
@@ -155,6 +166,39 @@
   color: var(--ws-teal-deep);
 }
 
+.cvShot {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.cvFrame {
+  display: block;
+  padding: var(--frame-pad);
+  background: var(--ws-frame);
+  border: 1px solid var(--ws-line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--frame-shadow);
+  text-decoration: none;
+  transition: transform var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.cvFrame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+  background: var(--ws-mat);
+}
+
+.cvCaption {
+  font-size: var(--text-xs);
+  color: var(--ws-faint);
+}
+
 .highlights {
   list-style: none;
   margin: 2.5rem 0 0;
@@ -185,6 +229,16 @@
   color: var(--ws-faint);
 }
 
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cvShot {
+    max-width: 20rem;
+  }
+}
+
 @media (max-width: 720px) {
   .highlights {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -195,5 +249,10 @@
   .ctaPrimary:hover,
   .ctaSecondary:hover {
     transform: translateY(-1px);
+  }
+
+  .cvFrame:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 55px rgba(21, 32, 40, 0.1), 0 2px 8px rgba(21, 32, 40, 0.04);
   }
 }

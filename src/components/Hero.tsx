@@ -7,46 +7,67 @@ export function Hero() {
     <header className={styles.hero} aria-labelledby="hero-heading">
       <div className={styles.wash} aria-hidden="true" />
       <div className={styles.inner}>
-        <p className={styles.kicker}>
-          {SITE.location} · Fintech + software
-        </p>
-        <h1 id="hero-heading" className={styles.name}>
-          {SITE.name}
-        </h1>
-        <p className={styles.headline}>{SITE.title}</p>
-        <p className={styles.oneLiner}>{SITE.oneLiner}</p>
+        <div className={styles.layout}>
+          <div className={styles.copy}>
+            <p className={styles.kicker}>
+              {SITE.location} · Fintech + software
+            </p>
+            <h1 id="hero-heading" className={styles.name}>
+              {SITE.name}
+            </h1>
+            <p className={styles.headline}>{SITE.title}</p>
+            <p className={styles.oneLiner}>{SITE.oneLiner}</p>
 
-        <div className={styles.tracks}>
-          <span className={`${styles.track} ${styles.trackCommercial}`}>
-            Account management
-          </span>
-          <span className={styles.trackDivider} aria-hidden="true">
-            /
-          </span>
-          <span className={`${styles.track} ${styles.trackDev}`}>
-            Software development
-          </span>
-        </div>
+            <div className={styles.tracks}>
+              <span className={`${styles.track} ${styles.trackCommercial}`}>
+                Account management
+              </span>
+              <span className={styles.trackDivider} aria-hidden="true">
+                /
+              </span>
+              <span className={`${styles.track} ${styles.trackDev}`}>
+                Software development
+              </span>
+            </div>
 
-        <p className={styles.craft}>
-          Shipped{' '}
-          <a href="#work">AuditPack</a> live · TypeScript, React, Node, Stripe
-        </p>
+            <p className={styles.craft}>
+              Shipped{' '}
+              <a href="#work">AuditPack</a> live · TypeScript, React, Node, Stripe
+            </p>
 
-        <div className={styles.ctaGroup}>
-          <a className={styles.ctaPrimary} href="#work">
-            See AuditPack
-          </a>
-          <a
-            className={styles.ctaSecondary}
-            href={CV_DOWNLOAD.href}
-            download={CV_DOWNLOAD.filename}
-          >
-            Download CV
-          </a>
-          <a className={styles.ctaSecondary} href="#contact">
-            Contact
-          </a>
+            <div className={styles.ctaGroup}>
+              <a className={styles.ctaPrimary} href="#work">
+                See AuditPack
+              </a>
+              <a
+                className={styles.ctaSecondary}
+                href={CV_DOWNLOAD.href}
+                download={CV_DOWNLOAD.filename}
+              >
+                Download CV
+              </a>
+              <a className={styles.ctaSecondary} href="#contact">
+                Contact
+              </a>
+            </div>
+          </div>
+
+          <figure className={styles.cvShot}>
+            <a
+              className={styles.cvFrame}
+              href="#cv"
+              aria-label="View full CV"
+            >
+              <img
+                src="/work/cv-page-1.png"
+                alt="Michael Fitzgerald CV, page 1"
+                width={480}
+                height={680}
+                decoding="async"
+              />
+            </a>
+            <figcaption className={styles.cvCaption}>CV · page 1</figcaption>
+          </figure>
         </div>
 
         <ul className={styles.highlights}>

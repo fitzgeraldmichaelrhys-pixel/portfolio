@@ -1,0 +1,77 @@
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.1rem var(--gutter);
+  background: var(--ws-linen-deep);
+  border-bottom: 1px solid var(--ws-line);
+  overflow: hidden;
+}
+
+.label {
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--ws-faint);
+}
+
+.rail {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.inner {
+  display: flex;
+  width: max-content;
+  animation: drift 42s linear infinite;
+}
+
+.track {
+  display: flex;
+  gap: 2rem;
+  padding-right: 2rem;
+}
+
+.word {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--ws-ink-soft);
+  white-space: nowrap;
+}
+
+.word::after {
+  content: '·';
+  margin-left: 2rem;
+  color: var(--ws-faint);
+}
+
+@keyframes drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inner {
+    animation: none;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .rail {
+    mask-image: none;
+    overflow: visible;
+  }
+
+  .word::after {
+    margin-left: 1rem;
+  }
+}

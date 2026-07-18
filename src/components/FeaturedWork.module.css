@@ -1,0 +1,112 @@
+.section {
+  text-align: left;
+  max-width: 52rem !important;
+}
+
+.header {
+  margin-bottom: 1.25rem;
+  max-width: 40rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--ws-faint);
+}
+
+.title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
+  font-weight: var(--weight-semibold);
+  color: var(--ws-ink);
+}
+
+.lede {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--ws-muted);
+}
+
+.lede a {
+  color: var(--ws-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ws-line-strong);
+}
+
+.lede a:hover {
+  border-bottom-color: var(--ws-ink);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.meta span {
+  padding: 0.35rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ws-ink-soft);
+  background: var(--ws-mat);
+  border: 1px solid var(--ws-line);
+  border-radius: var(--radius-sm);
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.shot {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.frame {
+  padding: var(--frame-pad);
+  background: var(--ws-frame);
+  border: 1px solid var(--ws-line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--frame-shadow);
+}
+
+.frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+  background: var(--ws-mat);
+}
+
+.shot figcaption {
+  font-size: var(--text-xs);
+  color: var(--ws-faint);
+}
+
+.cta {
+  display: inline-flex;
+  margin-top: 1.5rem;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ws-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ws-ink);
+}
+
+.cta:hover {
+  opacity: 0.75;
+}

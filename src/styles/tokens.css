@@ -1,0 +1,113 @@
+/**
+ * Warm studio — soft neutrals, photography frames, almost no neon
+ * Stone / linen / ink — accent is deep espresso, not lime
+ */
+
+:root {
+  --ws-linen: #e8e4dc;
+  --ws-linen-deep: #ddd7cc;
+  --ws-paper: #f7f5f1;
+  --ws-white: #fffcf8;
+  --ws-ink: #1a1816;
+  --ws-ink-soft: #2e2a26;
+  --ws-muted: #6e675e;
+  --ws-faint: #9a9288;
+  --ws-line: rgba(26, 24, 22, 0.12);
+  --ws-line-strong: rgba(26, 24, 22, 0.22);
+  --ws-espresso: #3d342c;
+  --ws-espresso-soft: rgba(61, 52, 44, 0.08);
+  --ws-mat: #f0ebe3;
+  --ws-frame: #ffffff;
+
+  --color-bg: var(--ws-linen);
+  --color-bg-elevated: var(--ws-paper);
+  --color-surface: var(--ws-white);
+  --color-text: var(--ws-muted);
+  --color-text-muted: var(--ws-faint);
+  --color-text-strong: var(--ws-ink);
+  --color-heading: var(--ws-ink);
+  --color-accent: var(--ws-espresso);
+  --color-accent-hover: var(--ws-ink);
+  --color-border: var(--ws-line);
+  --color-border-strong: var(--ws-line-strong);
+
+  --pf-ink: var(--ws-ink);
+  --pf-accent: var(--ws-espresso);
+  --pf-accent-bright: var(--ws-ink);
+  --pf-accent-muted: var(--ws-espresso-soft);
+  --pf-accent-border: var(--ws-line-strong);
+  --pf-copper: var(--ws-muted);
+  --pf-steel-warm: var(--ws-faint);
+  --pf-fog: var(--ws-muted);
+  --pf-mist: var(--ws-ink-soft);
+  --pf-slate-muted: var(--ws-faint);
+  --pf-white: var(--ws-ink);
+  --pf-shot-bg: var(--ws-mat);
+  --pf-shot-panel: var(--ws-frame);
+
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --text-xs: clamp(0.72rem, 0.68rem + 0.15vw, 0.78rem);
+  --text-sm: clamp(0.875rem, 0.84rem + 0.2vw, 0.9375rem);
+  --text-base: clamp(1.05rem, 1rem + 0.25vw, 1.125rem);
+  --text-md: clamp(1.15rem, 1.05rem + 0.4vw, 1.3rem);
+  --text-lg: clamp(1.35rem, 1.15rem + 0.7vw, 1.65rem);
+  --text-xl: clamp(1.6rem, 1.3rem + 1.2vw, 2.15rem);
+  --text-2xl: clamp(2rem, 1.5rem + 2vw, 3rem);
+  --text-3xl: clamp(2.5rem, 1.8rem + 2.8vw, 4rem);
+  --text-hero: clamp(3rem, 2.2rem + 4vw, 5.5rem);
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-tight: 1.05;
+  --leading-snug: 1.25;
+  --leading-normal: 1.55;
+  --leading-relaxed: 1.7;
+
+  --tracking-tight: -0.035em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.06em;
+  --tracking-wider: 0.12em;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  --content-max: 72rem;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  --radius-sm: 0.35rem;
+  --radius-md: 0.6rem;
+  --radius-lg: 0.9rem;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-normal: 240ms;
+  --duration-slow: 480ms;
+
+  --frame-pad: clamp(0.75rem, 2vw, 1.35rem);
+  --frame-shadow: 0 18px 50px rgba(26, 24, 22, 0.08), 0 2px 8px rgba(26, 24, 22, 0.04);
+
+  --accent: var(--ws-espresso);
+  --accent-border: var(--ws-line-strong);
+  --accent-bg: var(--ws-espresso-soft);
+  --bg: var(--ws-linen);
+  --text: var(--ws-muted);
+  --text-h: var(--ws-ink);
+  --border: var(--ws-line);
+  --mono: var(--font-mono);
+  --shadow: var(--frame-shadow);
+}

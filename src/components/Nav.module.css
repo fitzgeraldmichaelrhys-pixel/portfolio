@@ -1,0 +1,97 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--ws-linen) 94%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ws-line);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem var(--gutter);
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ws-ink);
+  text-decoration: none;
+}
+
+.toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.toggleBar {
+  display: block;
+  width: 1.15rem;
+  height: 1.5px;
+  margin-inline: auto;
+  background: var(--ws-ink);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  font-size: var(--text-sm);
+  color: var(--ws-muted);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--ws-ink);
+}
+
+@media (max-width: 720px) {
+  .toggle {
+    display: inline-flex;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 1rem var(--gutter) 1.25rem;
+    background: var(--ws-paper);
+    border-bottom: 1px solid var(--ws-line);
+  }
+
+  .linksOpen {
+    display: block;
+  }
+
+  .list {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav {
+    position: relative;
+    max-width: none;
+  }
+}

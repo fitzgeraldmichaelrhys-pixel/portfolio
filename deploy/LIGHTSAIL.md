@@ -89,31 +89,49 @@ One **1 GB** swap from `setup-server.sh` is enough for normal nginx + certbot us
 
 ---
 
-## Deploy (build locally, sync `dist/` only)
+## Deploy (preferred: pull built site from GitHub)
 
-### Git Bash / WSL / macOS
+Every push to `master` runs GitHub Actions, which builds the site and publishes the **`site`** branch (static files only — no Node on the server).
+
+### One-time on the server
 
 ```bash
-export PORTFOLIO_HOST=ubuntu@YOUR_STATIC_IP
-chmod +x deploy/deploy.sh
-./deploy/deploy.sh
+sudo mkdir -p /var/www/portfolio
+sudo chown ubuntu:ubuntu /var/www/portfolio
+git clone -b site --single-branch \
+  https://github.com/fitzgeraldmichaelrhys-pixel/portfolio.git \
+  /var/www/portfolio
 ```
 
-`deploy.sh` runs `npm run build` locally, then `rsync --delete` to `/var/www/portfolio/`.
+If the `site` branch does not exist yet, wait for the Actions run on GitHub to finish (Actions tab → **Build site**), then retry the clone.
 
-### Windows PowerShell
+### Updates (after you push to `master` and Actions is green)
+
+```bash
+cd /var/www/portfolio
+git fetch origin site
+git reset --hard origin/site
+```
+
+Or from a clone of the full repo:
+
+```bash
+chmod +x ~/portfolio/deploy/pull-site.sh
+~/portfolio/deploy/pull-site.sh
+```
+
+### Alternative: build locally and scp
 
 ```powershell
 cd C:\Users\batma\OneDrive\Desktop\portfolio
 npm run build
-scp -r dist/* ubuntu@YOUR_STATIC_IP:/var/www/portfolio/
+scp -r dist\* ubuntu@YOUR_STATIC_IP:/var/www/portfolio/
 ```
-
-For incremental uploads with delete semantics, use WSL/Git Bash and `deploy.sh`, or install rsync for Windows.
 
 ### Verify
 
 ```bash
+curl -I http://YOUR_STATIC_IP
 curl -I https://YOUR_DOMAIN
 ```
 

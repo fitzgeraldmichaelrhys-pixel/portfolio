@@ -10,14 +10,13 @@ export function Capabilities() {
           What I bring to a team
         </h2>
         <p className={styles.lede}>
-          Commercial habits from Revolut and PayPal on one side. Languages and product
-          tooling I use to ship on the other.
+          Account work first. A short programming set I use when I ship software.
         </p>
       </header>
 
       <div className={styles.grid}>
         <article className={`${styles.group} ${styles.groupCommercial}`}>
-          <h3 className={styles.groupTitle}>Fintech & account work</h3>
+          <h3 className={styles.groupTitle}>Account management and fintech</h3>
           <ul className={styles.chips}>
             {SKILLS.commercial.map((item) => (
               <li key={item}>{item}</li>
@@ -25,7 +24,7 @@ export function Capabilities() {
           </ul>
         </article>
         <article className={`${styles.group} ${styles.groupDev}`}>
-          <h3 className={styles.groupTitle}>Development</h3>
+          <h3 className={styles.groupTitle}>Programming</h3>
           <ul className={styles.chips}>
             {SKILLS.technical.map((item) => (
               <li key={item}>{item}</li>

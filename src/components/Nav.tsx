@@ -2,10 +2,10 @@ import { useCallback, useEffect, useId, useState } from 'react'
 import styles from './Nav.module.css'
 
 const NAV_LINKS = [
-  { label: 'Strengths', href: '#tracks' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Education', href: '#education' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Work', href: '#work' },
+  { label: 'Projects', href: '#projects' },
   { label: 'CV', href: '#cv' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },

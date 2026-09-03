@@ -1,8 +1,10 @@
 # Michael Fitzgerald — Portfolio
 
-Precision Forge personal site: full-stack product engineer portfolio optimized for hiring managers.
+Junior full-stack developer and account executive. Fintech experience at Revolut and PayPal. Galway, Ireland.
 
-**Flagship:** [AuditPack](https://getauditpack.com) · **Systems piece:** EternalForge · **Contact:** Mikeyfitz2021@gmail.com
+**Flagship product:** [AuditPack](https://getauditpack.com) — live compliance SaaS (TypeScript, React, Node.js, Stripe).  
+**Systems project:** Mimir — self-hosted GPU inference platform (Python, FastAPI, AWS L40S, OpenAI-compatible API).  
+**Contact:** Mikeyfitz2021@gmail.com · [LinkedIn](https://www.linkedin.com/in/michael-fitzgerald-42abab206/)
 
 ## Local
 

@@ -2,6 +2,7 @@ import { Nav } from './components/Nav'
 import { Hero } from './components/Hero'
 import { DualTracks } from './components/DualTracks'
 import { Experience } from './components/Experience'
+import { Education } from './components/Education'
 import { Capabilities } from './components/Capabilities'
 import { FeaturedWork } from './components/FeaturedWork'
 import { CvDocument } from './components/CvDocument'
@@ -14,8 +15,8 @@ import styles from './App.module.css'
 export default function App() {
   return (
     <div className={styles.app}>
-      <a className={styles.skip} href="#tracks">
-        Skip to strengths
+      <a className={styles.skip} href="#experience">
+        Skip to experience
       </a>
       <Nav />
       <main>
@@ -28,6 +29,11 @@ export default function App() {
         <Reveal>
           <section id="experience" className={styles.bandWide}>
             <Experience />
+          </section>
+        </Reveal>
+        <Reveal>
+          <section id="education" className={styles.bandWide}>
+            <Education />
           </section>
         </Reveal>
         <Reveal>

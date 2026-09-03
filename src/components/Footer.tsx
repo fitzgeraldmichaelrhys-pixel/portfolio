@@ -6,7 +6,7 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <p className={styles.line}>
-          {SITE.name} · Junior developer / Account manager · {SITE.location}
+          {SITE.name} · Account manager · {SITE.location}
         </p>
         <p className={styles.meta}>
           <a href={SITE.phoneHref}>{SITE.phone}</a>

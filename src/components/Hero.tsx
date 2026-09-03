@@ -10,7 +10,7 @@ export function Hero() {
         <div className={styles.layout}>
           <div className={styles.copy}>
             <p className={styles.kicker}>
-              {SITE.location} · Fintech + software
+              {SITE.location} · Fintech account management
             </p>
             <h1 id="hero-heading" className={styles.name}>
               {SITE.name}
@@ -31,13 +31,14 @@ export function Hero() {
             </div>
 
             <p className={styles.craft}>
-              Shipped{' '}
-              <a href="#work">AuditPack</a> live · TypeScript, React, Node, Stripe
+              <a href="#auditpack">AuditPack</a> live SaaS ·{' '}
+              <a href="#mimir">Mimir</a> GPU platform · TypeScript, Python, React,
+              FastAPI, AWS
             </p>
 
             <div className={styles.ctaGroup}>
-              <a className={styles.ctaPrimary} href="#work">
-                See AuditPack
+              <a className={styles.ctaPrimary} href="#experience">
+                See experience
               </a>
               <a
                 className={styles.ctaSecondary}

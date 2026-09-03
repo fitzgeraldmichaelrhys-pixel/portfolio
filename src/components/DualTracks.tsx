@@ -6,8 +6,8 @@ export function DualTracks() {
     <section id="tracks" className={styles.section} aria-labelledby="tracks-heading">
       <header className={styles.header}>
         <p className={styles.eyebrow}>Two strengths</p>
-        <h2 id="tracks-heading" className={styles.title}>
-          Commercial fintech experience, and a real product on the internet
+          <h2 id="tracks-heading" className={styles.title}>
+          Account work first. Software I shipped as well.
         </h2>
       </header>
 
@@ -38,11 +38,11 @@ export function DualTracks() {
             ))}
           </ul>
           <div className={styles.logos}>
-            <span>C</span>
             <span>Python</span>
             <span>TypeScript</span>
             <span>React</span>
-            <span>Node</span>
+            <span>FastAPI</span>
+            <span>AWS</span>
           </div>
         </article>
       </div>

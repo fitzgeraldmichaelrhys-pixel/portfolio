@@ -63,7 +63,7 @@
 
 .oneLiner {
   margin: 0.85rem 0 0;
-  max-width: 42ch;
+  max-width: 54ch;
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
   color: var(--ws-muted);

@@ -1,62 +1,50 @@
-import { AUDITPACK, SITE } from '../content/site'
+import { FEATURED, type FeaturedProject } from '../content/site'
 import styles from './FeaturedWork.module.css'
 
-const SHOTS = [
-  {
-    src: '/work/auditpack-hero.png',
-    alt: 'AuditPack product homepage',
-    caption: 'Marketing site and product entry',
-  },
-  {
-    src: '/work/auditpack-workflow.png',
-    alt: 'AuditPack workflow section',
-    caption: 'Evidence to pack workflow',
-  },
-  {
-    src: '/work/auditpack-standards.png',
-    alt: 'AuditPack standards overview',
-    caption: 'Standards coverage',
-  },
-] as const
-
-export function FeaturedWork() {
+function ProjectBlock({ project }: { project: FeaturedProject }) {
   return (
-    <section id="work" className={styles.section} aria-labelledby="work-heading">
+    <article id={project.id} className={styles.project} aria-labelledby={`${project.id}-heading`}>
       <div className={styles.accentBar} aria-hidden="true" />
       <header className={styles.header}>
-        <p className={styles.eyebrow}>{AUDITPACK.eyebrow}</p>
-        <h2 id="work-heading" className={styles.title}>
-          {AUDITPACK.title}
-        </h2>
+        <p className={styles.eyebrow}>{project.eyebrow}</p>
+        <h3 id={`${project.id}-heading`} className={styles.title}>
+          {project.title}
+        </h3>
         <p className={styles.lede}>
-          {AUDITPACK.ledeBefore}
-          <a href={SITE.auditPackUrl} target="_blank" rel="noopener noreferrer">
-            getauditpack.com
-          </a>
-          {AUDITPACK.ledeAfter}
+          {project.ledeBefore}
+          {project.ledeLink !== undefined && (
+            <a
+              href={project.ledeLink.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {project.ledeLink.label}
+            </a>
+          )}
+          {project.ledeAfter}
         </p>
       </header>
 
       <div className={styles.body}>
-        {AUDITPACK.body.map((paragraph) => (
-          <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+        {project.body.map((paragraph) => (
+          <p key={paragraph.slice(0, 40)}>{paragraph}</p>
         ))}
       </div>
 
       <div className={styles.meta}>
-        {AUDITPACK.stack.map((item) => (
+        {project.stack.map((item) => (
           <span key={item}>{item}</span>
         ))}
       </div>
 
       <ul className={styles.outcomes}>
-        {AUDITPACK.outcomes.map((item) => (
+        {project.outcomes.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
 
       <div className={styles.gallery}>
-        {SHOTS.map((shot) => (
+        {project.shots.map((shot) => (
           <figure key={shot.src} className={styles.shot}>
             <div className={styles.frame}>
               <img src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />
@@ -66,14 +54,38 @@ export function FeaturedWork() {
         ))}
       </div>
 
-      <a
-        className={styles.cta}
-        href={SITE.auditPackUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Open AuditPack live
-      </a>
+      {project.cta !== undefined && (
+        <a
+          className={styles.cta}
+          href={project.cta.href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {project.cta.label}
+        </a>
+      )}
+    </article>
+  )
+}
+
+export function FeaturedWork() {
+  return (
+    <section id="projects" className={styles.section} aria-labelledby="projects-heading">
+      <div id="work" />
+      <header className={styles.intro}>
+        <p className={styles.introEyebrow}>Selected work</p>
+        <h2 id="projects-heading" className={styles.introTitle}>
+          Projects
+        </h2>
+        <p className={styles.introLede}>
+          Two systems I designed, built, and still run: a live compliance SaaS
+          and a self-hosted GPU inference platform.
+        </p>
+      </header>
+
+      {FEATURED.map((project) => (
+        <ProjectBlock key={project.id} project={project} />
+      ))}
     </section>
   )
 }

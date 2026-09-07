@@ -1,4 +1,4 @@
-import { PAYPAL_SCORECARD } from '../content/site'
+import { PAYPAL_SCORECARD } from '../content/kpis'
 import styles from './Scorecard.module.css'
 
 export function Scorecard() {
@@ -10,15 +10,15 @@ export function Scorecard() {
           What I was measured on
         </h2>
         <p className={styles.lede}>
-          Averages on the Business Development desk. The combination is the point:
-          I hit the commercial number, the activity number, and customer
-          satisfaction in the same seat — the profile a high-volume outbound team
+          Averages on the Business Development desk. Revenue, CSAT, call activity
+          and talk time sat alongside meetings booked, show rate, connect rate,
+          QA, adherence and CRM hygiene — the mix a professional outbound team
           actually keeps.
         </p>
       </header>
       <ul className={styles.grid}>
         {PAYPAL_SCORECARD.map((item) => (
-          <li key={item.label} className={styles.item}>
+          <li key={item.id} className={styles.item}>
             <span className={styles.value}>{item.value}</span>
             <span className={styles.label}>{item.label}</span>
           </li>

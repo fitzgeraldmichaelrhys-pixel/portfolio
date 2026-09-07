@@ -18,30 +18,13 @@ export const SITE = {
   year: new Date().getFullYear(),
 } as const
 
-export const HIGHLIGHTS = [
-  { value: '111%', label: 'Revenue vs target' },
-  { value: '99%', label: 'CSAT average' },
-  { value: '99%', label: 'Of 200-call daily target' },
-  { value: '96%', label: 'Of 2h 30m daily talk time' },
-] as const
-
-/** PayPal BDR scorecard — numbers Michael was managed on. Do not invent extras. */
-export const PAYPAL_SCORECARD = [
-  { value: '111%', label: 'Revenue vs target' },
-  { value: '99%', label: 'Customer satisfaction (CSAT)' },
-  { value: '99%', label: 'Call-target adherence' },
-  { value: '96%', label: 'Talk-time adherence' },
-  { value: '200', label: 'Daily call target' },
-  { value: '2h 30m', label: 'Daily talk-time target' },
-] as const
-
 export const TRACKS = {
   fintech: {
     title: 'Account management and fintech',
     lede: 'Client-facing work in fast B2B environments where pipeline, CRM hygiene, and follow-through actually matter.',
     points: [
       'Junior Account Executive at Revolut: client meetings, CRM, and onboarding support',
-      'PayPal BDR: 111% of revenue target, 99% CSAT, 99% of a 200-call day, 96% of 2h 30m talk time — volume without burning the customer',
+      'PayPal BDR: revenue, CSAT, talk time, call activity, meetings booked, show rate, connect rate, and QA — full scorecard below',
       'Lead Generation Team Lead at IDG Direct: coaching, daily metrics, and floor operations',
       'Comfortable on phone and email, in CRM tools, and against a number',
     ],

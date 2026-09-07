@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 from reportlab.lib.colors import HexColor
@@ -18,6 +19,7 @@ from reportlab.platypus import (
 )
 
 ROOT = Path(__file__).resolve().parent.parent
+KPI_FILE = ROOT / "src" / "content" / "kpis.json"
 OUT_PDF = ROOT / "public" / "Michael_Fitzgerald_CV.pdf"
 OUT_DIR = ROOT / "public" / "work"
 
@@ -177,6 +179,18 @@ def styles() -> dict[str, ParagraphStyle]:
     }
 
 
+def load_kpis() -> tuple[list[dict], list[dict]]:
+    payload = json.loads(KPI_FILE.read_text(encoding="utf-8"))
+    items = payload["items"]
+    confirmed = [row for row in items if row.get("confirmed")]
+    extra = [row for row in items if not row.get("confirmed")]
+    return confirmed, extra
+
+
+def kpi_sentence(rows: list[dict]) -> str:
+    return "; ".join(f'{row["value"]} {row["label"]}' for row in rows)
+
+
 def bullet(text: str, s: dict[str, ParagraphStyle]) -> Paragraph:
     return Paragraph(f"- {text}", s["bullet"])
 
@@ -198,6 +212,7 @@ def decorate(canvas, _doc) -> None:
 
 def build() -> None:
     s = styles()
+    confirmed, extra = load_kpis()
     doc = SimpleDocTemplate(
         str(OUT_PDF),
         pagesize=A4,
@@ -248,9 +263,9 @@ def build() -> None:
             "Account manager with more than five years in business development, lead generation, "
             "and account support across fintech and B2B. Most recently a Junior Account Executive "
             "at Revolut and a Business Development Representative at PayPal, after leading a "
-            "lead-generation team at IDG Direct. On the PayPal desk I averaged 111% of the revenue "
-            "target, 99% CSAT, 99% of a 200-call daily target, and 96% of a 2 hour 30 minute daily "
-            "talk-time target. I run client meetings, keep CRM records clean, help onboard new "
+            "lead-generation team at IDG Direct. On the PayPal desk: "
+            + kpi_sentence(confirmed)
+            + ". I run client meetings, keep CRM records clean, help onboard new "
             "accounts, and stay on the phone until the follow-up is done.",
             s["body"],
         )
@@ -275,8 +290,8 @@ def build() -> None:
             "PayPal",
             "Galway, Ireland  |  03/2024 - 09/2025",
             [
-                "Averaged 111% of the revenue target while holding 99% CSAT.",
-                "Hit 99% of a 200-call daily target and 96% of a 2 hour 30 minute daily talk-time target.",
+                kpi_sentence(confirmed) + ".",
+                kpi_sentence(extra) + ".",
                 "Owned outbound pipeline: cold calling, email outreach, and networking events aimed at prospective B2B clients.",
                 "Backed the account management team by taking client inquiries on phone and email and closing the loop quickly.",
             ],

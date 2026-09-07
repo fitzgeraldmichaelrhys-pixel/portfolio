@@ -1,3 +1,5 @@
+import { PAYPAL_METRICS } from './kpis'
+
 export type RoleMetric = {
   value: string
   label: string
@@ -28,17 +30,12 @@ export const EXPERIENCE: {
     role: 'Business Development Representative',
     period: '03/2024 – 09/2025',
     place: 'Galway, Ireland',
-    metrics: [
-      { value: '111%', label: 'Revenue vs target' },
-      { value: '99%', label: 'CSAT' },
-      { value: '99%', label: 'Of 200 calls / day' },
-      { value: '96%', label: 'Of 2h 30m talk time' },
-    ],
+    metrics: PAYPAL_METRICS.map(({ value, label }) => ({ value, label })),
     bullets: [
       'Averaged 111% of the revenue target while holding 99% CSAT — commercial result without burning the customer.',
       'Hit 99% of a 200-call daily target and 96% of a 2 hour 30 minute daily talk-time target: activity and real conversation time, not empty dials.',
+      'Also tracked meetings booked vs target, appointment show rate, decision-maker connect rate, and call QA — the KPIs that sit next to the dials.',
       'Owned outbound pipeline: cold calling, email outreach, and networking events aimed at prospective B2B clients.',
-      'Backed the account management team by taking client inquiries on phone and email and closing the loop quickly.',
     ],
   },
   {

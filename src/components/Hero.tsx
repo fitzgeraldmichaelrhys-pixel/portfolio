@@ -1,4 +1,5 @@
-import { HIGHLIGHTS, SITE } from '../content/site'
+import { SITE } from '../content/site'
+import { HIGHLIGHTS } from '../content/kpis'
 import { CV_DOWNLOAD } from '../content/cv'
 import styles from './Hero.module.css'
 
@@ -73,7 +74,7 @@ export function Hero() {
 
         <ul className={styles.highlights}>
           {HIGHLIGHTS.map((item) => (
-            <li key={item.label} className={styles.highlight}>
+            <li key={item.id} className={styles.highlight}>
               <span className={styles.highlightValue}>{item.value}</span>
               <span className={styles.highlightLabel}>{item.label}</span>
             </li>

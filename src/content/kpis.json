@@ -1,0 +1,88 @@
+{
+  "_comment": "Edit values here, then: python scripts/generate_cv.py && npm run build. confirmed=true are Michael's numbers. confirmed=false are placeholders — replace before quoting them.",
+  "heroIds": ["revenue", "csat", "calls", "talk"],
+  "experienceIds": [
+    "revenue",
+    "csat",
+    "calls",
+    "talk",
+    "meetings",
+    "shows",
+    "connect",
+    "qa"
+  ],
+  "items": [
+    {
+      "id": "revenue",
+      "value": "111%",
+      "label": "Revenue vs target",
+      "confirmed": true
+    },
+    {
+      "id": "csat",
+      "value": "99%",
+      "label": "CSAT average",
+      "confirmed": true
+    },
+    {
+      "id": "calls",
+      "value": "99%",
+      "label": "Of 200-call daily target",
+      "confirmed": true
+    },
+    {
+      "id": "talk",
+      "value": "96%",
+      "label": "Of 2h 30m daily talk time",
+      "confirmed": true
+    },
+    {
+      "id": "meetings",
+      "value": "117%",
+      "label": "Meetings booked vs target",
+      "confirmed": false
+    },
+    {
+      "id": "shows",
+      "value": "92%",
+      "label": "Appointment show rate",
+      "confirmed": false
+    },
+    {
+      "id": "connect",
+      "value": "31%",
+      "label": "Decision-maker connect rate",
+      "confirmed": false
+    },
+    {
+      "id": "qa",
+      "value": "97%",
+      "label": "Call quality / QA score",
+      "confirmed": false
+    },
+    {
+      "id": "adherence",
+      "value": "98%",
+      "label": "Schedule adherence",
+      "confirmed": false
+    },
+    {
+      "id": "crm",
+      "value": "100%",
+      "label": "Same-day CRM notes",
+      "confirmed": false
+    },
+    {
+      "id": "fcr",
+      "value": "94%",
+      "label": "First-contact resolution",
+      "confirmed": false
+    },
+    {
+      "id": "attendance",
+      "value": "99%",
+      "label": "Shift attendance",
+      "confirmed": false
+    }
+  ]
+}

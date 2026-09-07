@@ -1,5 +1,6 @@
 import { Nav } from './components/Nav'
 import { Hero } from './components/Hero'
+import { Scorecard } from './components/Scorecard'
 import { DualTracks } from './components/DualTracks'
 import { Experience } from './components/Experience'
 import { Education } from './components/Education'
@@ -23,6 +24,11 @@ export default function App() {
         <Hero />
         <Reveal>
           <section className={`${styles.bandWide} ${styles.bandTint}`}>
+            <Scorecard />
+          </section>
+        </Reveal>
+        <Reveal>
+          <section className={styles.bandWide}>
             <DualTracks />
           </section>
         </Reveal>

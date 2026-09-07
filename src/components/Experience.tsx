@@ -29,6 +29,16 @@ export function Experience() {
                   {entry.role}
                   <span className={styles.place}> · {entry.place}</span>
                 </p>
+                {entry.metrics ? (
+                  <ul className={styles.metrics} aria-label={`${entry.company} scorecard`}>
+                    {entry.metrics.map((metric) => (
+                      <li key={metric.label}>
+                        <span className={styles.metricValue}>{metric.value}</span>
+                        <span className={styles.metricLabel}>{metric.label}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
                 <ul className={styles.bullets}>
                   {entry.bullets.map((bullet) => (
                     <li key={bullet}>{bullet}</li>

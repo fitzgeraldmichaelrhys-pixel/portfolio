@@ -2,7 +2,7 @@ export const SITE = {
   name: 'Michael Fitzgerald',
   title: 'Account Manager · Fintech and B2B',
   oneLiner:
-    'Account management and business development at Revolut and PayPal. I also ship software, but client work is the main job. Open to account manager, account executive, and BDR roles in fintech and B2B SaaS.',
+    'Account management and business development at Revolut and PayPal. On the PayPal BDR desk I was measured on CSAT, talk time, call activity, and revenue — and I cleared the line on all four. I also ship software, but client work is the main job.',
   email: 'Mikeyfitz2021@gmail.com',
   phone: '+353 89 943 8384',
   phoneHref: 'tel:+353899438384',
@@ -19,10 +19,20 @@ export const SITE = {
 } as const
 
 export const HIGHLIGHTS = [
-  { value: '5+', label: 'Years in sales and BD' },
-  { value: 'AE', label: 'Revolut and PayPal' },
-  { value: '2', label: 'Shipped systems' },
-  { value: 'BSc', label: 'Computer Science' },
+  { value: '111%', label: 'Revenue vs target' },
+  { value: '99%', label: 'CSAT average' },
+  { value: '99%', label: 'Of 200-call daily target' },
+  { value: '96%', label: 'Of 2h 30m daily talk time' },
+] as const
+
+/** PayPal BDR scorecard — numbers Michael was managed on. Do not invent extras. */
+export const PAYPAL_SCORECARD = [
+  { value: '111%', label: 'Revenue vs target' },
+  { value: '99%', label: 'Customer satisfaction (CSAT)' },
+  { value: '99%', label: 'Call-target adherence' },
+  { value: '96%', label: 'Talk-time adherence' },
+  { value: '200', label: 'Daily call target' },
+  { value: '2h 30m', label: 'Daily talk-time target' },
 ] as const
 
 export const TRACKS = {
@@ -31,7 +41,7 @@ export const TRACKS = {
     lede: 'Client-facing work in fast B2B environments where pipeline, CRM hygiene, and follow-through actually matter.',
     points: [
       'Junior Account Executive at Revolut: client meetings, CRM, and onboarding support',
-      'Business Development Representative at PayPal: outbound outreach, pipeline, and account support',
+      'PayPal BDR: 111% of revenue target, 99% CSAT, 99% of a 200-call day, 96% of 2h 30m talk time — volume without burning the customer',
       'Lead Generation Team Lead at IDG Direct: coaching, daily metrics, and floor operations',
       'Comfortable on phone and email, in CRM tools, and against a number',
     ],

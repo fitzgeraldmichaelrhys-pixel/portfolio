@@ -248,9 +248,10 @@ def build() -> None:
             "Account manager with more than five years in business development, lead generation, "
             "and account support across fintech and B2B. Most recently a Junior Account Executive "
             "at Revolut and a Business Development Representative at PayPal, after leading a "
-            "lead-generation team at IDG Direct. I run client meetings, keep Customer Relationship "
-            "Management (CRM) records clean, help onboard new accounts, and stay on the phone and "
-            "email until the follow-up is done. I also build software when a SaaS team needs it.",
+            "lead-generation team at IDG Direct. On the PayPal desk I averaged 111% of the revenue "
+            "target, 99% CSAT, 99% of a 200-call daily target, and 96% of a 2 hour 30 minute daily "
+            "talk-time target. I run client meetings, keep CRM records clean, help onboard new "
+            "accounts, and stay on the phone until the follow-up is done.",
             s["body"],
         )
     )
@@ -274,10 +275,10 @@ def build() -> None:
             "PayPal",
             "Galway, Ireland  |  03/2024 - 09/2025",
             [
+                "Averaged 111% of the revenue target while holding 99% CSAT.",
+                "Hit 99% of a 200-call daily target and 96% of a 2 hour 30 minute daily talk-time target.",
                 "Owned outbound pipeline: cold calling, email outreach, and networking events aimed at prospective B2B clients.",
                 "Backed the account management team by taking client inquiries on phone and email and closing the loop quickly.",
-                "Built working relationships with prospects in a high-volume fintech environment where follow-through is the job.",
-                "Handled customer questions with clear product knowledge instead of bouncing people around.",
             ],
         ),
         (

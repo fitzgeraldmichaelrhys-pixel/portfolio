@@ -5,7 +5,7 @@ import styles from './Contact.module.css'
 export function Contact() {
   return (
     <section className={styles.contact} aria-labelledby="contact-heading">
-      <p className={styles.eyebrow}>Get in touch</p>
+      <p className={styles.eyebrow}>Say hello</p>
       <h2 id="contact-heading" className={styles.title}>
         Contact
       </h2>

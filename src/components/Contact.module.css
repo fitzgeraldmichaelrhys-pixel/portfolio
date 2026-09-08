@@ -38,13 +38,13 @@
   font-family: var(--font-display);
   font-size: var(--text-md);
   font-weight: 600;
-  color: var(--ws-teal);
+  color: #fff;
   text-decoration: none;
-  border-bottom: 1px solid var(--ws-teal-mid);
+  background: var(--ws-teal);
 }
 
 .primaryCta:hover {
-  border-bottom-color: var(--ws-teal);
+  color: #fff;
 }
 
 .phone {

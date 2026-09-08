@@ -10,10 +10,10 @@ export function Scorecard() {
           What I was measured on
         </h2>
         <p className={styles.lede}>
-          Averages on the Business Development desk. Revenue, CSAT, call activity
-          and talk time sat alongside meetings booked, show rate, connect rate,
-          QA, adherence and CRM hygiene — the mix a professional outbound team
-          actually keeps.
+          Two years on the PayPal outbound desk, measured like everyone else:
+          revenue, CSAT, talk time, daily calls. Booked meetings, show rate,
+          connect rate, QA and adherence sat right next to those dials. Averages,
+          not cherry picks.
         </p>
       </header>
       <ul className={styles.grid}>

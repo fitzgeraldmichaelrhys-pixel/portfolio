@@ -9,10 +9,9 @@ export function About() {
         About
       </h2>
       <p className={styles.bio}>
-        I&apos;m based in {SITE.location}. Most of my working life so far has been{' '}
-        <strong>fintech and B2B commercial work</strong>: Revolut as a Junior Account
-        Executive, PayPal as a Business Development Representative, and earlier lead
-        generation leadership at IDG Direct.
+        I live in {SITE.location} and sell fintech — that&apos;s been my whole working
+        life so far: accounts at Revolut, two years on outbound at PayPal, and before
+        all of it, a lead generation team of my own at IDG Direct.
       </p>
       <p className={styles.bio}>
         Client work is the main job. Alongside it I ship software in TypeScript, React,

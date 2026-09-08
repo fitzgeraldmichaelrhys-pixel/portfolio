@@ -13,7 +13,7 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 0.9rem var(--gutter);
-  max-width: 52rem;
+  max-width: var(--content-max);
   margin: 0 auto;
 }
 

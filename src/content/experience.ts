@@ -19,10 +19,10 @@ export const EXPERIENCE: {
     period: '09/2025 – 03/2026',
     place: 'Galway, Ireland',
     bullets: [
-      'Worked with senior Account Managers to set up and run client meetings across a B2B fintech book of accounts.',
-      'Supported day-to-day account management: follow-ups, stakeholder coordination, and keeping the next conversation moving.',
-      'Kept Customer Relationship Management (CRM) records accurate so account history and pipeline stayed visible to the team.',
-      'Helped onboard new clients and sat through product training so I could answer account questions without handing every query up.',
+      'Set up and ran client meetings across a B2B fintech book, shoulder to shoulder with senior Account Managers — the kind of work that shows you where accounts are actually heading.',
+      'Kept days moving: follow-ups, stakeholder coordination, making sure the next conversation happened without me chasing it down first.',
+      'Treated CRM like something customers would one day read. If account history and pipeline were wrong there, they were wrong everywhere.',
+      'Brought new clients aboard myself — onboarding flows plus product training, so I could answer most account questions instead of passing them upstairs.',
     ],
   },
   {
@@ -32,10 +32,10 @@ export const EXPERIENCE: {
     place: 'Galway, Ireland',
     metrics: PAYPAL_METRICS.map(({ value, label }) => ({ value, label })),
     bullets: [
-      'Averaged 111% of the revenue target while holding 99% CSAT — commercial result without burning the customer.',
-      'Hit 99% of a 200-call daily target and 96% of a 2 hour 30 minute daily talk-time target: activity and real conversation time, not empty dials.',
-      'Also tracked meetings booked vs target, appointment show rate, decision-maker connect rate, and call QA — the KPIs that sit next to the dials.',
-      'Owned outbound pipeline: cold calling, email outreach, and networking events aimed at prospective B2B clients.',
+      "Averaged 111% of revenue target with CSAT holding near 99% — growing the book without torching the relationships it depends on.",
+      'Dialled ~200 calls a day and hit 96–97% of talk-time targets. That\'s real conversation time, not padded connect stats.',
+      'Ran my own numbers against meetings booked, show rate, decision-maker connect rate and call QA — the metrics that actually sit next to the dials.',
+      'Owned outbound pipeline end-to-end: cold calls, email sequences, and networking events aimed at B2B prospects who had never heard of us.',
     ],
   },
   {
@@ -44,9 +44,9 @@ export const EXPERIENCE: {
     period: '02/2021 – 01/2022',
     place: 'Galway, Ireland',
     bullets: [
-      'Ran daily operations for a lead generation team: priorities, task assignment, and keeping the floor moving.',
-      'Coached and trained new hires on outreach quality, not just activity volume.',
-      'Tracked performance against company targets and stepped in when a number was slipping.',
+      "Ran the day for a lead generation team — set priorities, split up the work, kept the floor moving between 9 and 6.",
+      'Trained new starters on making calls people answer, not just hitting dial counts. Volume means nothing if the conversation is bad.',
+      "Watched the numbers daily and stepped in when someone was slipping, rather than waiting for Monday's review to find out a target had quietly died.",
     ],
   },
   {
@@ -55,8 +55,8 @@ export const EXPERIENCE: {
     period: '01/2020 – 02/2021',
     place: 'Galway, Ireland',
     bullets: [
-      'Generated leads through targeted outreach and clear communication.',
-      'Researched prospective clients using online tools and databases.',
+      "Cold called lists I built myself — researched each prospect before dialling so the first line wasn't generic.",
+      'Owned prospecting end-to-end: finding the right people, figuring out how to reach them, getting a yes out of it.',
     ],
   },
 ]

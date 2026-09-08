@@ -4,10 +4,10 @@
  */
 
 :root {
-  --ws-linen: #e6ebe8;
-  --ws-linen-deep: #d5ddd8;
-  --ws-paper: #f4f7f5;
-  --ws-white: #fcfdfc;
+  --ws-linen: #e9ece6;
+  --ws-linen-deep: #d8e0da;
+  --ws-paper: #f7f5ef;
+  --ws-white: #fffdf9;
   --ws-ink: #152028;
   --ws-ink-soft: #2a3540;
   --ws-muted: #5c676f;
@@ -17,14 +17,17 @@
   --ws-mat: #ebf0ed;
   --ws-frame: #ffffff;
 
-  /* Primary: Atlantic teal. Secondary: warm copper. */
-  --ws-teal: #0f5c66;
-  --ws-teal-deep: #0a454c;
-  --ws-teal-soft: rgba(15, 92, 102, 0.1);
-  --ws-teal-mid: rgba(15, 92, 102, 0.18);
-  --ws-copper: #b86a3d;
-  --ws-copper-soft: rgba(184, 106, 61, 0.12);
-  --ws-sea: #3d7a72;
+  /* Primary: vivid Atlantic teal. Secondary: warm copper/amber. Tertiary accents for variety. */
+  --ws-teal: #0e8a94;
+  --ws-teal-deep: #076572;
+  --ws-teal-soft: rgba(14, 138, 148, 0.1);
+  --ws-teal-mid: rgba(14, 138, 148, 0.22);
+  --ws-copper: #e07a3f;
+  --ws-copper-deep: #b65a26;
+  --ws-copper-soft: rgba(224, 122, 63, 0.14);
+  --ws-sea: #2fa98c;
+  --ws-gold: #d9a441;
+  --ws-plum: #6b5ca5;
 
   --ws-espresso: var(--ws-teal-deep);
   --ws-espresso-soft: var(--ws-teal-soft);
@@ -55,7 +58,15 @@
   --pf-shot-bg: var(--ws-mat);
   --pf-shot-panel: var(--ws-frame);
 
+  /* Editorial ink surface (dark hero) */
+  --ws-ink-dark: #0f171d;
+  --ws-ink-dark-2: #16222b;
+  --ws-paper-on-ink: rgba(244, 247, 245, 0.92);
+  --ws-muted-on-ink: rgba(244, 247, 245, 0.62);
+  --ws-line-on-ink: rgba(244, 247, 245, 0.16);
+
   --font-display: 'Outfit', system-ui, sans-serif;
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
   --font-body: 'Source Sans 3', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
@@ -67,7 +78,7 @@
   --text-xl: clamp(1.6rem, 1.3rem + 1.2vw, 2.15rem);
   --text-2xl: clamp(2rem, 1.5rem + 2vw, 3rem);
   --text-3xl: clamp(2.5rem, 1.8rem + 2.8vw, 4rem);
-  --text-hero: clamp(3rem, 2.2rem + 4vw, 5.5rem);
+  --text-hero: clamp(2.75rem, 1.9rem + 3vw, 4.5rem);
 
   --weight-regular: 400;
   --weight-medium: 500;

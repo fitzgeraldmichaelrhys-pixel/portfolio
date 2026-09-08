@@ -1,85 +1,81 @@
 import { SITE } from '../content/site'
-import { HIGHLIGHTS } from '../content/kpis'
 import { CV_DOWNLOAD } from '../content/cv'
 import styles from './Hero.module.css'
 
 export function Hero() {
   return (
-    <header className={styles.hero} aria-labelledby="hero-heading">
-      <div className={styles.wash} aria-hidden="true" />
+    <header id="top" className={styles.plate} aria-labelledby="hero-heading">
       <div className={styles.inner}>
-        <div className={styles.layout}>
-          <div className={styles.copy}>
-            <p className={styles.kicker}>
-              {SITE.location} · Fintech account management
-            </p>
-            <h1 id="hero-heading" className={styles.name}>
-              {SITE.name}
+        <span className={styles.watermark} aria-hidden="true">
+          MF
+        </span>
+
+        <nav className={styles.masthead} aria-label="Site masthead">
+          <a href="#top" className={styles.nameLink}>{SITE.name}</a>
+          <span className={styles.mastheadMeta}>Portfolio &mdash; 2026</span>
+        </nav>
+
+        <div className={styles.gridCols}>
+          <div className={styles.colMain}>
+            <p className={styles.roleEyebrow}>Account Manager &middot; Fintech &amp; B2B</p>
+            <h1 id="hero-heading" className={styles.headline}>
+              I run fintech accounts by day.
+              <br />
+              <span className={styles.altLine}>I write software after hours.</span>
             </h1>
-            <p className={styles.headline}>{SITE.title}</p>
-            <p className={styles.oneLiner}>{SITE.oneLiner}</p>
+            <p className={styles.lede}>{SITE.oneLiner}</p>
 
-            <div className={styles.tracks}>
-              <span className={`${styles.track} ${styles.trackCommercial}`}>
-                Account management
-              </span>
-              <span className={styles.trackDivider} aria-hidden="true">
-                /
-              </span>
-              <span className={`${styles.track} ${styles.trackDev}`}>
-                Software development
-              </span>
-            </div>
-
-            <p className={styles.craft}>
-              <a href="#auditpack">AuditPack</a> live SaaS ·{' '}
-              <a href="#mimir">Mimir</a> GPU platform · TypeScript, Python, React,
-              FastAPI, AWS
-            </p>
-
-            <div className={styles.ctaGroup}>
-              <a className={styles.ctaPrimary} href="#experience">
-                See experience
-              </a>
+            <nav className={styles.actions} aria-label="Primary actions">
+              <a className={styles.linkAction} href="#experience">See experience</a>
+              <a className={styles.linkAction} href="#projects">Projects</a>
               <a
-                className={styles.ctaSecondary}
+                className={styles.linkAction}
                 href={CV_DOWNLOAD.href}
                 download={CV_DOWNLOAD.filename}
               >
-                Download CV
+                CV (PDF) &darr;
               </a>
-              <a className={styles.ctaSecondary} href="#contact">
-                Contact
-              </a>
-            </div>
+            </nav>
           </div>
 
-          <figure className={styles.cvShot}>
-            <a
-              className={styles.cvFrame}
-              href="#cv"
-              aria-label="View full CV"
-            >
-              <img
-                src="/work/cv-page-1.png"
-                alt="Michael Fitzgerald CV, page 1"
-                width={480}
-                height={680}
-                decoding="async"
-              />
-            </a>
-            <figcaption className={styles.cvCaption}>CV · page 1</figcaption>
-          </figure>
-        </div>
+          <aside className={styles.colFacts} aria-label="Contact facts">
+            <dl className={styles.factPanel}>
+              <div>
+                <dt>Status</dt>
+                <dd>
+                  <span className={styles.liveDot} aria-hidden="true" />
+                  Open for Q4 2026 &mdash; fintech and B2B SaaS roles
+                </dd>
+              </div>
 
-        <ul className={styles.highlights}>
-          {HIGHLIGHTS.map((item) => (
-            <li key={item.id} className={styles.highlight}>
-              <span className={styles.highlightValue}>{item.value}</span>
-              <span className={styles.highlightLabel}>{item.label}</span>
-            </li>
-          ))}
-        </ul>
+              <div>
+                <dt>Email</dt>
+                <dd>
+                  <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+                </dd>
+              </div>
+
+              <div>
+                <dt>Profiles</dt>
+                <dd>
+                  <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>{' '}
+                  &middot;{' '}
+                  <a href={SITE.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                </dd>
+              </div>
+
+              <div>
+                <dt>Based in</dt>
+                <dd>{SITE.location}</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+
+      <div className={styles.strip} aria-hidden="true">
+        <span>Revolut &middot; PayPal &middot; IDG Direct</span>
+        <span>Fintech &amp; B2B SaaS — Galway, EU/US overlap, remote OK</span>
       </div>
     </header>
   )

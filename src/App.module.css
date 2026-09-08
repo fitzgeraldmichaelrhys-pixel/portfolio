@@ -27,20 +27,53 @@
 .bandWide {
   width: 100%;
   box-sizing: border-box;
-  border-top: 1px solid var(--ws-line);
+  border-top: 1px solid transparent;
+  background-clip: padding-box;
 }
 
+.bandPlum {
+  /* Soft plum wash -- distinct from the teal bands */
+  background:
+    radial-gradient(44rem 28rem at 15% -30%, rgba(107, 92, 165, 0.11), transparent 70%),
+    linear-gradient(180deg, color-mix(in srgb, var(--ws-plum) 4%, var(--ws-paper)), var(--ws-linen) 96%);
+}
+
+.bandCopper {
+  /* Warm copper wash */
+  background:
+    radial-gradient(42rem 26rem at 85% -30%, rgba(217, 164, 65, 0.12), transparent 70%),
+    linear-gradient(180deg, color-mix(in srgb, var(--ws-copper) 5%, var(--ws-paper)), var(--ws-linen) 96%);
+}
+
+.bandSeaside {
+  /* Sea-green wash */
+  background:
+    radial-gradient(42rem 26rem at 50% -30%, rgba(47, 169, 140, 0.1), transparent 70%),
+    linear-gradient(180deg, color-mix(in srgb, var(--ws-sea) 4%, var(--ws-paper)), var(--ws-linen) 96%);
+}
+
+
 .bandTint {
-  background: color-mix(in srgb, var(--ws-teal-soft) 55%, var(--ws-paper));
+  /* Teal wash + soft plum glow, tinted enough to read as a band */
+  background:
+    radial-gradient(40rem 26rem at 10% -30%, rgba(107, 92, 165, 0.1), transparent 70%),
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--ws-teal-soft) 72%, var(--ws-paper)) 0%,
+      var(--ws-paper) 92%);
 }
 
 .bandWork {
   background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--ws-teal-soft) 40%, var(--ws-linen)) 0%,
-      var(--ws-linen) 100%
-    );
+    radial-gradient(46rem 30rem at 55% -25%, var(--ws-copper-soft), transparent 70%),
+    linear-gradient(180deg,
+      color-mix(in srgb, #d9a441 12%, var(--ws-linen)) 0%,
+      var(--ws-linen) 100%);
+}
+
+.contactBand {
+  background:
+    radial-gradient(50rem 30rem at 85% -30%, rgba(14, 138, 148, 0.12), transparent 70%),
+    color-mix(in srgb, var(--ws-teal-soft) 60%, var(--ws-paper));
 }
 
 .band > * {

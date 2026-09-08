@@ -28,17 +28,17 @@ export default function App() {
           </section>
         </Reveal>
         <Reveal>
-          <section className={styles.bandWide}>
+          <section className={`${styles.bandWide} ${styles.bandPlum}`}>
             <DualTracks />
           </section>
         </Reveal>
         <Reveal>
-          <section id="experience" className={styles.bandWide}>
+          <section id="experience" className={`${styles.bandWide} ${styles.bandCopper}`}>
             <Experience />
           </section>
         </Reveal>
         <Reveal>
-          <section id="education" className={styles.bandWide}>
+          <section id="education" className={`${styles.bandWide} ${styles.bandSeaside}`}>
             <Education />
           </section>
         </Reveal>
@@ -48,17 +48,15 @@ export default function App() {
           </section>
         </Reveal>
         <Reveal>
-          <section className={`${styles.bandWide} ${styles.bandWork}`}>
-            <FeaturedWork />
-          </section>
+          <FeaturedWork />
         </Reveal>
         <Reveal>
-          <section className={styles.band}>
+          <section className={`${styles.band} ${styles.bandCopper}`}>
             <CvDocument />
           </section>
         </Reveal>
         <Reveal>
-          <section id="about" className={styles.band}>
+          <section id="about" className={`${styles.band} ${styles.bandPlum}`}>
             <About />
           </section>
         </Reveal>

@@ -2,7 +2,7 @@ export const SITE = {
   name: 'Michael Fitzgerald',
   title: 'Account Manager · Fintech and B2B',
   oneLiner:
-    'Account management and business development at Revolut and PayPal. On the PayPal BDR desk I was measured on CSAT, talk time, call activity, and revenue — and I cleared the line on all four. I also ship software, but client work is the main job.',
+    "I talk to customers for a living — at Revolut I've coordinated the meetings behind a fintech pipeline, and on PayPal's outbound desk I hit my number in revenue, CSAT, talk time, and call activity. People think 'numbers person,' which is fair. They also catch me building software: two real systems this site shows you below.",
   email: 'Mikeyfitz2021@gmail.com',
   phone: '+353 89 943 8384',
   phoneHref: 'tel:+353899438384',
@@ -11,7 +11,7 @@ export const SITE = {
   github: 'https://github.com/fitzgeraldmichaelrhys-pixel',
   githubPortfolio: 'https://github.com/fitzgeraldmichaelrhys-pixel/portfolio',
   availability:
-    'Open to account manager, account executive, and business development roles in fintech and B2B SaaS. Also open to junior commercial-technical roles where client work comes first.',
+    "Hunting for my next client-facing role — account manager, AE, or BD in fintech or B2B SaaS. Bonus if the team ships software I have opinions about.",
   education: 'BSc Computer Science, IU University, Germany (expected 09/2028)',
   school: "St Enda's Community School, Limerick. High School Diploma (2016)",
   auditPackUrl: 'https://getauditpack.com',
@@ -20,23 +20,25 @@ export const SITE = {
 
 export const TRACKS = {
   fintech: {
-    title: 'Account management and fintech',
-    lede: 'Client-facing work in fast B2B environments where pipeline, CRM hygiene, and follow-through actually matter.',
+    title: 'The side that pays my rent',
+    lede:
+      "Talking to people about money software is what my days actually look like — cold callers before lunch, CRM entries after. I'm comfortable being the person who has to make a number, and it shows in how I handle a client once they pick up.",
     points: [
-      'Junior Account Executive at Revolut: client meetings, CRM, and onboarding support',
-      'PayPal BDR: revenue, CSAT, talk time, call activity, meetings booked, show rate, connect rate, and QA — full scorecard below',
-      'Lead Generation Team Lead at IDG Direct: coaching, daily metrics, and floor operations',
-      'Comfortable on phone and email, in CRM tools, and against a number',
+      'Revolut, Junior Account Executive — kept senior AMs running: client meetings, CRM records, onboarding support',
+      "PayPal BDR — a real target every day. Cleared it (full scorecard below)",
+      'IDG Direct — ran the floor for lead generation, coached reps, chased daily metrics',
+      'Good enough people-wise that I got hired and kept working — but I can prove it with numbers',
     ],
   },
   developer: {
-    title: 'Junior full-stack developer',
-    lede: 'Not just coursework. Two systems I designed, built, and still run: a live SaaS product and a GPU inference platform.',
+    title: 'The side that keeps me honest',
+    lede:
+      "This is less of a hobby and more how I stay sharp. Two real systems I designed, built, and still run daily: one's a live B2B SaaS the other side pays for, the other keeps an NVIDIA GPU on AWS working like it means it.",
     points: [
-      'Languages: C, Python, TypeScript, JavaScript, and SQL',
-      'Web and APIs: HTML, CSS, React, Node.js, Express, FastAPI, REST APIs, Git',
-      'AuditPack: full product path from UI and API through authentication, payments, and production deploys',
-      'Mimir: Python/FastAPI control plane for an AWS GPU box, with an OpenAI-compatible API for Cursor',
+      'The toolbox: C to learn the low side, then Python, TypeScript and SQL on top; React, Node.js and FastAPI when I build things people click',
+      'AuditPack — a live SaaS with real signups, Stripe checkout, and production deploys. I own every layer of it',
+      "Mimir — my GPU box on AWS. It speaks the OpenAI dialect now, so Cursor just points at it",
+      "And this site. It's React on a custom design system I built myself — look in the source if you don't believe me",
     ],
   },
 } as const
@@ -92,15 +94,16 @@ export type FeaturedProject = {
 export const FEATURED: FeaturedProject[] = [
   {
     id: 'auditpack',
-    eyebrow: 'Featured product',
+    eyebrow: 'The thing I\'m proudest of shipping',
     title: 'AuditPack',
-    ledeBefore: 'A compliance SaaS I built end to end and shipped at ',
+    ledeBefore:
+      "Everyone knows the feeling of a compliance audit — weeks lost wrangling evidence out of folders to fit into Word templates. AuditPack is my answer to that, live at ",
     ledeLink: { href: 'https://getauditpack.com', label: 'getauditpack.com' },
     ledeAfter:
-      '. Teams upload evidence, map it to ISO clauses, and export working packs instead of fighting folders of Word documents.',
+      '. Teams upload their proof, we map each file to the specific ISO clause it satisfies, and out comes an exportable audit pack instead of another spreadsheet nightmare.',
     body: [
-      'The front end is React and TypeScript. The REST API sits on Node.js and Express. Project data and authentication live in Supabase (PostgreSQL). Purchases go through Stripe. That is the same path most small B2B SaaS products take, owned by me from blank repository to production.',
-      'On the product side, users run gap analysis against ISO standards, walk a guided workflow from raw evidence to a defensible pack, and export Word, Excel, or PDF. Public tools on the marketing site cover gap analysis, benchmarks, and a how-it-works walkthrough so buyers can try the idea before they pay.',
+      'The front end is React and TypeScript. The REST API sits on Node.js and Express. Project data and authentication live in Supabase (PostgreSQL). Purchases go through Stripe. That’s the same stack most small B2B SaaS products run — except here I own every layer, from empty repo to production deploys.',
+      'On the product side, users start with a gap analysis against whatever ISO standard they have on the horizon, then work through evidence item by item with guidance on what maps where. The end result exports clean into Word, Excel, or PDF. There are also public tools — free gap analyses and benchmark checkers — so buyers can feel the value before paying.',
     ],
     stack: [
       'TypeScript',
@@ -113,9 +116,9 @@ export const FEATURED: FeaturedProject[] = [
       'Stripe',
     ],
     outcomes: [
-      'Live SaaS with authentication, checkout, and production deploys — not a mock',
-      'Clause-mapped packs exportable to Word, Excel, and PDF',
-      'Public gap analysis and benchmark tools on the marketing site',
+      'Real users pay for it: live SaaS with Stripe checkout, Supabase auth, and production deploys — not a mock or demo',
+      "If you're mapping evidence to ISO clauses manually right now, imagine letting this do it for you",
+      "You can try the gap analysis tool free on getauditpack.com before committing to anything",
     ],
     shots: [
       {

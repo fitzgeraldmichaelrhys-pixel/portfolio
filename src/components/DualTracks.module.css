@@ -73,17 +73,19 @@
 
 .cardTitle {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  font-weight: 600;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  line-height: 1.2;
   color: var(--ws-ink);
 }
 
 .cardLede {
   margin: 0;
+  font-family: var(--font-serif);
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
-  color: var(--ws-muted);
+  color: var(--ws-ink-soft);
 }
 
 .list {

@@ -54,20 +54,39 @@
   padding: 0.85rem 0.9rem 0.75rem 2.4rem;
   text-decoration: none;
   background: transparent;
-  border-left: 3px solid transparent;
   transition: transform var(--duration-normal) var(--ease-out),
     border-color var(--duration-normal) var(--ease-out);
 }
 
+/* Active/hover marker is a short bracket tick in the gutter, not a full edge bar */
+.indexLink::before {
+  content: '';
+  position: absolute;
+  left: 0.8rem;
+  top: 1.35rem;
+  width: 16px;
+  height: 1.5px;
+  background: transparent;
+  transition: width var(--duration-normal) var(--ease-out),
+    background-color var(--duration-normal) var(--ease-out);
+}
+
 .indexLink:hover {
   transform: translateX(2px);
-  border-left-color: var(--ws-copper);
+}
+.indexLink:hover::before {
+  width: 16px;
+  background: var(--ws-copper);
 }
 
 .indexLink.active,
 .indexLink.active:hover {
-  border-left-color: var(--accent);
   background: linear-gradient(90deg, rgba(15, 92, 102, 0.1), 35%, transparent 72%);
+}
+
+.indexLink.active::before {
+  width: 24px;
+  background-color: var(--accent);
 }
 
 .indexTitle {

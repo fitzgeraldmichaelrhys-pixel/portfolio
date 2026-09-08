@@ -73,13 +73,34 @@
 }
 
 .entryBody {
+  position: relative;
   min-width: 0;
-  padding: 1.15rem 1.2rem;
+  padding: 1.25rem 1.3rem;
   background: var(--ws-frame);
-  border: 1px solid var(--ws-line);
-  border-radius: var(--radius-md);
-  box-shadow: var(--frame-shadow);
-  border-top: 3px solid var(--ws-copper);
+  border: 1px solid var(--ws-line-strong);
+  border-radius: var(--radius-sm);
+}
+
+.entryBody::before,
+.entryBody::after {
+  content: '';
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  pointer-events: none;
+  color: var(--ws-copper);
+}
+.entryBody::before {
+  top: 9px;
+  left: 9px;
+  border-top: 1.5px solid currentcolor;
+  border-left: 1.5px solid currentcolor;
+}
+.entryBody::after {
+  bottom: 9px;
+  right: 9px;
+  border-bottom: 1.5px solid currentcolor;
+  border-right: 1.5px solid currentcolor;
 }
 
 .entryHead {

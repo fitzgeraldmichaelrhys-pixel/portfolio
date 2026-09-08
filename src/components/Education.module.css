@@ -44,12 +44,33 @@
 }
 
 .entry {
-  padding: 1.15rem 1.2rem;
+  position: relative;
+  padding: 1.25rem 1.3rem;
   background: var(--ws-frame);
-  border: 1px solid var(--ws-line);
-  border-radius: var(--radius-md);
-  box-shadow: var(--frame-shadow);
-  border-left: 3px solid var(--ws-teal);
+  border: 1px solid var(--ws-line-strong);
+  border-radius: var(--radius-sm);
+}
+
+/* Signature card accent: asymmetric corner crop-marks instead of an edge bar */
+.entry::before,
+.entry::after {
+  content: '';
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  pointer-events: none;
+}
+.entry::before {
+  top: 9px;
+  left: 9px;
+  border-top: 1.5px solid var(--ws-teal);
+  border-left: 1.5px solid var(--ws-teal);
+}
+.entry::after {
+  bottom: 9px;
+  right: 9px;
+  border-bottom: 1.5px solid currentcolor;
+  border-right: 1.5px solid currentcolor;
 }
 
 .entryHead {

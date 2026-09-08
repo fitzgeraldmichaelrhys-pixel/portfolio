@@ -39,19 +39,32 @@
 }
 
 .group {
-  padding: 1.35rem;
+  position: relative;
+  padding: 1.45rem 1.35rem;
   background: var(--ws-frame);
-  border: 1px solid var(--ws-line);
-  border-radius: var(--radius-md);
-  border-left: 3px solid transparent;
+  border: 1px solid var(--ws-line-strong);
+  border-radius: var(--radius-sm);
+}
+
+/* Per-track accent as a corner mark, dropping the flat left edge bar */
+.group::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 0.7rem;
+  height: 0.7rem;
+  pointer-events: none;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
 }
 
 .groupCommercial {
-  border-left-color: var(--ws-copper);
+  color: var(--ws-copper);
 }
 
 .groupDev {
-  border-left-color: var(--ws-teal);
+  color: var(--ws-teal);
 }
 
 .groupTitle {

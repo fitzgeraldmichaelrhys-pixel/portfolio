@@ -33,26 +33,48 @@
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  padding: 1.5rem 1.35rem 1.35rem;
+  padding: 1.5rem 1.35rem 1.45rem;
   background: var(--ws-frame);
-  border: 1px solid var(--ws-line);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--ws-line-strong);
+  border-radius: var(--radius-sm);
   box-shadow: var(--frame-shadow);
   min-height: 100%;
-  border-top: 3px solid transparent;
   transition: transform var(--duration-normal) var(--ease-out),
     box-shadow var(--duration-normal) var(--ease-out);
 }
 
-.cardCommercial {
-  border-top-color: var(--ws-copper);
+/* Track identity via opposing corner crop-marks, not a top edge bar */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 0.8rem;
+  height: 0.8rem;
+  pointer-events: none;
+  border-top: 1.5px solid currentColor;
+  border-left: 1.5px solid currentColor;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  width: 0.8rem;
+  height: 0.8rem;
+  pointer-events: none;
+  transition: transform var(--duration-normal) var(--ease-out);
 }
 
-.cardDev {
-  border-top-color: var(--ws-teal);
+.cardCommercial { color: var(--ws-copper); }
+.cardDev      { color: var(--ws-teal); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .card:hover::after { transform: translateY(-2px); }
 }
 
 .cardKicker {

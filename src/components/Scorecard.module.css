@@ -47,11 +47,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  padding: 1.1rem 1rem 1rem;
+  padding: 1.15rem 1rem 1.05rem;
   background: var(--ws-frame);
   border: 1px solid var(--ws-line);
   border-radius: var(--radius-md);
-  border-top: 3px solid var(--ws-teal);
 }
 
 .value {
